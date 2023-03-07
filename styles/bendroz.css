@@ -513,7 +513,7 @@ iframe.bas_de_page {
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 768px) {
 
     .icon {
         float: right;
