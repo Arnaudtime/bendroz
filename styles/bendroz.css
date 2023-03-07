@@ -1,0 +1,587 @@
+/**/
+/* rouge - #E84545
+noir  - #262626 */
+
+
+* {
+    font-family: 'Corbel', sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #262626;
+    margin: 0;
+    height: auto;
+    width: 100%;
+}
+
+
+/* Onglet de navigation supérieur*/
+
+
+div.topnav_barre {
+    overflow: hidden;
+    z-index: 100;
+    background-color: #333232;
+    position: sticky;
+    top: 0;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div.topnav_barre a.page {
+    text-align: center;
+    display: inline-block;
+    padding: 14px 40px;
+    text-decoration: none;
+    color: white;
+    font-size:26px;
+    
+}
+
+div.topnav_barre a.page:hover {
+    background-color: #303030;
+}
+
+div.topnav_barre a.page.active {
+    color: #E84545;
+    text-underline-offset: 8px;
+    
+}
+
+.icon {
+    display: none;
+}
+
+
+
+/* Logo Bendroz sans texte */
+
+img.logo {
+    display: block;
+    width: 20%;
+    max-width: 400px;
+    min-width: 200px;
+    margin: 100px auto 100px auto;
+}
+
+img.texte_logo {
+    display: block;
+    width: 400px;
+    margin: 0 auto 100px auto;
+}
+
+/* ROTATION utiliser la classe .rotating */
+
+@-webkit-keyframes rotating /* Safari and Chrome */ {
+    from {
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  @keyframes rotating {
+    from {
+      -ms-transform: rotate(0deg);
+      -moz-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      -o-transform: rotate(0deg);
+      transform: rotate(0deg);
+    }
+    to {
+      -ms-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -webkit-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  .rotating {
+    -webkit-animation: rotating 30s linear infinite;
+    -moz-animation: rotating 30s linear infinite;
+    -ms-animation: rotating 30s linear infinite;
+    -o-animation: rotating 30s linear infinite;
+    animation: rotating 30s linear infinite;
+  }
+
+
+/* PAGE PRINCIPALE*/
+
+
+
+/* cartographie*/
+
+div.carto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 800px;
+    background-image: url(/images/fond_courbes.png);
+    background-size: cover;
+}
+
+div.carto div.information {    
+    padding: 20px;
+    height: fit-content;
+    width: 400px;
+    background-color: rgba(255, 255, 255, 0.61);
+    box-shadow: 0px 0px 20px 10px white;
+    border-radius: 30px;
+}
+
+div.carto div.image {
+    justify-content: center;
+    display: flex;
+}
+
+
+div.carto h2 { 
+    margin-top: 0;
+    font-size: 34px;
+    text-align: center;
+    color: white;
+}
+
+div.carto p { 
+    margin-top: 0;
+    font-size: 24px;
+    text-align: justify;
+    color: white;
+}
+
+
+
+/* Analyse spatiale*/
+
+div.analyse_spatiale {
+    margin-top: 0px;
+    height: fit-content;
+    padding: 20px 40px 30px 40px;
+    background-color: #E84545;
+}
+
+div.analyse_spatiale div.texte {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    min-width: 400px;
+    border-bottom: #262626 solid;
+    max-width: 780px;
+}
+
+div.analyse_spatiale h2 {
+    font-size: 34px;
+    text-align: center;
+}
+
+div.analyse_spatiale p {
+    font-size: 24px;
+    text-align: justify;
+    
+}
+
+div.analyse_spatiale div.image {
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+}
+
+div.img1 {
+    position: relative;
+}
+
+div.img2 {
+    position: absolute;
+    top: 0;
+
+}
+
+div.analyse_spatiale img {
+    height: 100%;
+    max-height: 400px;
+
+}
+
+div.analyse_spatiale {
+    padding: 20px 40px 30px 40px;
+
+}
+
+#image_disparition {
+    -webkit-animation: 3s ease 0s normal forwards 1 fadein;
+    animation: 5s ease 0s normal forwards 1 fadein;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fadein{
+    66% { opacity:0; }
+    100% { opacity:1; }
+}
+
+@-webkit-keyframes fadein{
+    66% { opacity:0; }
+    100% { opacity:1; }
+}
+
+
+/* AFFICHE*/
+
+div.affiche {
+    justify-content: center;
+    height: fit-content;
+    display: flex;
+}
+
+
+
+div.affiche div.container {
+    height: 500px;
+    width: 400px;
+    margin: 50px;
+
+}
+
+div.affichette .container {
+    padding: 20px 40px;
+    margin-left: auto;
+    margin-right: auto;
+    border: #E84545 solid;
+}
+
+div.affichette img {
+    height: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+div.affichette h2 {
+    font-size: 34px;
+    text-align: center;
+    color: white;
+}
+
+div.affichette p {
+    text-align: justify;
+    color: white;
+    font-size: 24px;
+}
+
+div.affichette {
+    width: fit-content;
+
+}
+
+
+/*
+div.affiche {
+    justify-content: center;
+    height: fit-content;
+    display: flex;
+}
+
+div.affiche div.container {
+    height: 500px;
+    width: 400px;
+    margin: 50px;
+
+}
+
+div.affichette .container {
+    padding: 20px 40px;
+    margin-left: auto;
+    margin-right: auto;
+    border: #E84545 solid;
+}
+
+div.affichette img {
+    height: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+div.affichette h2 {
+    font-size: 34px;
+    text-align: center;
+    color: white;
+}
+
+div.affichette p {
+    text-align: justify;
+    color: white;
+    font-size: 24px;
+}*/
+
+
+/* PAGE A PROPOS*/
+
+/* Histoire*/
+
+div.histoire h1 {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+div.histoire div.information {
+    border-right: #E84545 solid;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: 20%;
+    margin-right: 20%;
+    
+}
+
+div.histoire div.information p {
+    margin-right: 80px;
+    margin-left: 80px;
+    font-size: 26px;
+    color: white;
+    text-align:justify ;
+
+}
+
+/* Collaborateur*/
+
+div.collaborateur div.information {
+    width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border-left: #E84545 solid;
+    
+}
+
+div.collaborateur {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+div.collaborateur h1 {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+div.collaborateur figure {
+    display: inline-block;
+    margin: 80px;
+    text-align: center;
+}
+
+div.collaborateur div.image_collaborateur {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
+div.collaborateur img.collaborateur {
+    border: white solid;
+    box-shadow: 0px 0px 4px 0px white;   
+    border-radius: 25%; 
+    
+    
+}
+
+figcaption {
+    text-align: center;
+    color: white;
+    font-size: 18px;
+    font-weight: lighter;
+}
+
+
+div.image {
+    display: block;
+    height: 100px;
+    margin: 20px;
+}
+
+.image1 {
+    display: block;
+    height: 100px;
+    margin-left: 5%;
+    float: left;
+}
+.image2 {
+    margin-right: 5%;
+    display: block;
+    height: 100px;
+    float: right;
+}
+
+/* SEPARATEUR*/
+
+div.separateur {
+    padding: 20px;
+}
+
+
+
+
+iframe.separateur {
+    width: 100%;
+    height: 300px;
+    border: none;
+}
+
+.img_separateur {
+    display: inline-block;
+    padding: 60px;
+    height: 100px;
+
+}
+
+.separateur_container {
+    margin: 40px auto 40px auto;
+    width: fit-content;
+}
+
+
+
+/* Bas de page*/
+
+footer.bas_de_page {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: 200px;
+    height: 500px;
+    background-image: linear-gradient(#262626, 30%, #E84545 );
+    box-shadow: 0px 0px 0px 0px #E84545;
+}
+
+footer.bas_de_page img {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 100px;
+    padding: 20px;
+    
+}
+
+iframe.bas_de_page {
+    width: 100%;
+    height: 700px;
+    border: none;
+}
+
+.image_remplacement {
+    display: none;
+}
+
+
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+
+@media only screen and (max-width: 1100px) {
+    div.affichette {
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+        padding: 30px;
+    
+    }
+
+    div.affiche {
+        display: block;
+    }
+
+    div.affiche div.container {
+        height: fit-content;
+        max-width: 80%;
+        margin: 0;
+    
+    }
+
+    div.collaborateur figure {
+        display: block;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+
+    .icon {
+        float: right;
+        display: inline;
+        color: white;
+        font-size: 40px;
+        padding: 20px;
+        }
+    
+
+    div.topnav_barre a.page {
+        display: none;
+    }
+
+    div.topnav_barre.responsive a {
+        display: block;
+    }
+
+    div.topnav_barre {
+        background-color: #262626;
+        width: 100%;
+    }
+
+    div.topnav_barre.responsive {
+        width: 100%;
+    }
+
+    div.logo_principal {
+        display: none;
+    }
+
+    .image_remplacement {
+        display: inline-block;
+        height: 50px;
+        padding: 20px;
+    }
+
+    div.affichette {
+        width: 80%;
+        padding: 30px;
+    
+    }
+
+    div.histoire div.information {
+        margin-left: 10%;
+        margin-right: 10%;
+        
+    }
+
+    div.histoire div.information p {
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    
+
+
+    
+  }
+
+  
+  /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+
+
+
+    .menu.responsive a.element {
+        float: none;
+        display: block;    
+    }
+    
+
+
